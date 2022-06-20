@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medFactory.UI", "medFactory.UI\medFactory.UI.csproj", "{BE19A87F-7630-406A-8CFE-005D362079F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "medFactory.UI", "medFactory.UI\medFactory.UI.csproj", "{BE19A87F-7630-406A-8CFE-005D362079F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medFactory.Domain", "medFactory.Domain\medFactory.Domain.csproj", "{1FB29650-4404-4115-90C9-FD86084DABB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "medFactory.Domain", "medFactory.Domain\medFactory.Domain.csproj", "{1FB29650-4404-4115-90C9-FD86084DABB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medFactory.EF", "medFactory.EF\medFactory.EF.csproj", "{3EA2C32B-A817-4BB1-8771-D45D7A148C25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "medFactory.EF", "medFactory.EF\medFactory.EF.csproj", "{3EA2C32B-A817-4BB1-8771-D45D7A148C25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

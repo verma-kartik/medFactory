@@ -1,11 +1,9 @@
 ﻿using medFactory.UI.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+using medFactory.UI.Views;
+using Prism.DryIoc;
+using Prism.Ioc;
 using System.Windows;
+
 
 namespace medFactory.UI
 {
@@ -16,12 +14,9 @@ namespace medFactory.UI
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new MainWindow()
-            {
-                DataContext = new MainViewModel()
-            };
-            MainWindow.Show();
             base.OnStartup(e);
+            var bootstrapper = new Bootstrapper();
+            bootstrapper.Run();
         }
     }
 }

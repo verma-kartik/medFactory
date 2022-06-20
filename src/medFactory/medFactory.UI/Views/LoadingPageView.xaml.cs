@@ -11,7 +11,7 @@ namespace medFactory.UI.Views
         public LoadingPageView()
         {
             InitializeComponent();
-            DataContext = new LoadingPageViewModel();
+            
         }
     }
 }

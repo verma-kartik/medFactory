@@ -10,10 +10,9 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace medFactory.UI
+namespace medFactory.UI.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +22,11 @@ namespace medFactory.UI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            InvalidateVisual();
         }
     }
 }
