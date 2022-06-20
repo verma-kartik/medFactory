@@ -4,11 +4,120 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:medFactory.UI.Views"
+            xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:UserLoginViewModel}"
              mc:Ignorable="d" 
              MinHeight="600" 
              MinWidth="1000"
-             Background="Orange">
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Style="{StaticResource UserLoginPageBackground}">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            Margin="35 0 0 0"
+            HorizontalAlignment="Left"
+            FontSize="30"
+            VerticalAlignment="Center">
+            <Run
+                Text="Smart"/><Run
+                FontWeight="Bold"
+                Text="Login"/>
+        </TextBlock>
+
+        <Grid Grid.Row="1"
+              Width="400"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <!--username-->
+                <RowDefinition Height="100"/>
+                <!--email-->
+                <RowDefinition Height="100"/>
+                <!--password-->
+                <RowDefinition/>
+                <!--button-->
+                <RowDefinition Height="100"/>
+                <!--note-->
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="30"
+                Grid.Row="0">
+                <Run
+                    FontWeight="SemiBold"
+                    Text="Hello,"/>
+                <Run
+                    x:Name="username"
+                    Text="User!"
+                    Foreground="#355C7D"
+                    FontWeight="Bold"/>
+            </TextBlock>
+
+            <Border 
+                Grid.Row="1"
+                Style="{StaticResource textBoxBorder}">
+                <Grid Margin = "10 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <fa:IconImage 
+                        Icon="User" Foreground="black" Height="15" Width="20"/>
+                    <TextBox 
+                        Grid.Column="1"
+                        x:Name = "txtUsername"
+                        Style="{StaticResource credentialTextBox}"/>
+                </Grid>
+            </Border >
+
+            <Border 
+                Grid.Row="2"
+                Style="{StaticResource textBoxBorder}">
+                <Grid Margin = "10 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <fa:IconImage Icon="Lock" Foreground="black" Height="15" Width="20"/>
+                    <TextBox 
+                        Grid.Column="1"
+                        x:Name = "txtPassword"
+                        Style="{StaticResource credentialTextBox}"/>
+                </Grid>
+            </Border >
+
+            <Button
+                Width="130"
+                Content="Login"
+ 
+                Style="{StaticResource primaryButton}"
+                Command="{Binding SubmitCommand}"
+                Click="Button_Click"
+                Grid.Row="3"/>
+
+            <TextBlock 
+                Grid.Row="4"
+                VerticalAlignment="Bottom"
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                Foreground="#a3a3a3"
+                FontWeight="SemiBold">              
+                <Run
+                    Text="Note:"
+                    FontWeight="bold"/>
+                <LineBreak/>
+                <Run
+                    Text="Never disclose your login credemtials to anyone. Contact ADMIN 
+                    in case you forgot." />
+            </TextBlock>
+        </Grid>
     </Grid>
 </UserControl>
