@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="medFactory.UI.Views.DashboardMenuBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:medFactory.UI.Views" 
+             
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:prism="http://prismlibrary.com/" 
+             mc:Ignorable="d" 
+             MinWidth="228"
+             MinHeight="800">
+
+    <Border>
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5, 1">
+                <GradientStop Color="#223266" Offset="0"/>
+                <GradientStop Color="#27396b" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <StackPanel>
+            <!--username-->
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 35 0 0">
+                <Border CornerRadius="10" Height="40" Width="40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#7f7cf1" Offset="0"/>
+                            <GradientStop Color="#d3b7ff" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <TextBlock Text="MP" Foreground="White" FontSize="20" FontWeight="SemiBold"
+                                   TextAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+
+                <StackPanel Margin="10 0 0 0" VerticalAlignment="Center">
+                    <TextBlock Text="MedFactory" FontSize="15" Margin="0 0 0 5" Foreground="#c2cfff"/>
+                    <TextBlock Text="Alpha 1.0" FontSize="11" Foreground="#7788bf"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <Separator Margin="20 30" Height="0.8" Background="#46558a"/>
+
+            <!--Menu Buttons
+                <Button Style="{StaticResource quickAddButton}"
+                        x:Name="Quick_Add_Button"
+                        Click="Quick_Add_Button_Click">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="+ Quick Add" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+                -->
+
+
+            <Button 
+                    x:Name="DashboardButton"
+                    Style="{StaticResource menuButton}" Click="DashboardButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Home"
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Dashboard"
+                                   Style="{StaticResource menuButtonText}"
+                                   />
+                </StackPanel>
+            </Button>
+
+            <Button 
+                    x:Name="DrugsButton"
+                    Style="{StaticResource menuButton}" Click="DrugsButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Pills"
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Drugs" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <!--<Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="ShoppingCart"
+                                     Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Orders" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Coins" 
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Billing" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <Button 
+                    x:Name="CustomerButton"
+                    Style="{StaticResource menuButton}" Click="CustomerButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Mandalorian"
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Customers"
+                                   Style="{StaticResource menuButtonText}"
+                                   />
+                </StackPanel>
+            </Button>
+
+            <Button
+                    x:Name="SupplierButton"
+                    Style="{StaticResource menuButton}" Click="SupplierButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Truck" 
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Suppliers" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <Button 
+                    x:Name="ManufacturerButton"
+                    Style="{StaticResource menuButton}" Click="ManufacturerButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="FlagCheckered" 
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Manufacturers" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource menuButton}"
+                        x:Name="Logout_Button"
+                        Click="Logout_Button_Click">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="PowerOff" 
+                                      Style="{StaticResource menuIcons}"/>
+                    <TextBlock Text="Logout" Style="{StaticResource menuButtonText}"/>
+                </StackPanel>
+            </Button>-->
+
+        </StackPanel>
+
+    </Border>
+</UserControl>
