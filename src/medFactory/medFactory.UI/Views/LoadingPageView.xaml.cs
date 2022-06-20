@@ -10,8 +10,7 @@ namespace medFactory.UI.Views
     {
         public LoadingPageView()
         {
-            InitializeComponent();
-            
+            InitializeComponent();  
         }
     }
 }
