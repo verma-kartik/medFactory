@@ -11,6 +11,8 @@ namespace medFactory.UI.ViewModels
         {
             _regionManager = regionManager;
             _regionManager.RegisterViewWithRegion(Region.Regions.MenuRegion, typeof(DashboardMenuBarView));
+            _regionManager.RegisterViewWithRegion(Region.Regions.RibbonRegion, typeof(RibbonView));
+            _regionManager.RegisterViewWithRegion(Region.Regions.EditingRegion, typeof(DashboardContentView));
         }
 
     }

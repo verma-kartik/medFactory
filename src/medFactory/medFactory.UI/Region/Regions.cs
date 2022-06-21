@@ -7,5 +7,7 @@
         public const string? MenuRegion = "MenuRegion";
 
         public const string? EditingRegion = "EditingRegion";
+
+        public const string? RibbonRegion = "RibbonRegion";
     }
 }

@@ -12,15 +12,5 @@ namespace medFactory.UI.Views
         {
             InitializeComponent();
         }
-
-        private void DashboardButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Method intentionally left empty.
-        }
-
-        private void DrugsButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Method intentionally left empty.
-        }
     }
 }

@@ -20,6 +20,8 @@ namespace medFactory.UI
             containerRegistry.RegisterForNavigation<UserLoginView, UserLoginViewModel>();
             containerRegistry.RegisterForNavigation<DashboardView, DashboardViewModel>();
             containerRegistry.RegisterForNavigation<DashboardMenuBarView, DashboardMenuBarViewModel>();
+            containerRegistry.RegisterForNavigation<RibbonView, RibbonViewModel>();
+            containerRegistry.RegisterForNavigation<DashboardContentView, DashboardContentViewModel>();
         }
     }
 }

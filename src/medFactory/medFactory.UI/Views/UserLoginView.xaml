@@ -97,7 +97,6 @@
             <Button
                 Width="130"
                 Content="Login"
- 
                 Style="{StaticResource primaryButton}"
                 Command="{Binding SubmitCommand}"
                 Click="Button_Click"

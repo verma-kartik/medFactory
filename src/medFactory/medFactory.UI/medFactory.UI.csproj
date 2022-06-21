@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\dashboard_1.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\outofstock.png" />
+    <None Remove="Images\productsonlowstock.png" />
+    <None Remove="Images\productstobearrived.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\outofstock.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,7 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\dashboard_1.png" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\productsonlowstock.png" />
+    <Resource Include="Images\productstobearrived.png" />
   </ItemGroup>
 
 </Project>
