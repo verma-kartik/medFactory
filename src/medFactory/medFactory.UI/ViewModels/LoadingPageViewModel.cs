@@ -15,7 +15,7 @@ namespace medFactory.UI.ViewModels
             _regionManager = regionManager;
             _timer = new DispatcherTimer();
             _timer.Tick += DispatcherTimer_Tick;
-            _timer.Interval = new TimeSpan(0, 0, 10);
+            _timer.Interval = new TimeSpan(0, 0, 2);
             _timer.Start();
         }
 

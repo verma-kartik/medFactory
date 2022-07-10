@@ -100,7 +100,7 @@
                 Style="{StaticResource primaryButton}"
                 Command="{Binding SubmitCommand}"
                 Click="Button_Click"
-                Grid.Row="3"/>
+                Grid.Row="3" Cursor="Hand"/>
 
             <TextBlock 
                 Grid.Row="4"

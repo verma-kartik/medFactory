@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Regions;
 using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace medFactory.UI.ViewModels

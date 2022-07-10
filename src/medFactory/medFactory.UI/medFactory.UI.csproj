@@ -20,9 +20,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FontAwesome.Sharp" Version="5.15.4" />
+    <PackageReference Include="devexpress.wpf.grid.core" Version="21.2.8" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.1.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.4" />
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="20.2.0.36" />
+    <PackageReference Include="syncfusion.ui.wpf.net" Version="20.1.0.47" />
   </ItemGroup>
 
   <ItemGroup>

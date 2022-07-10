@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:medFactory.UI.Views"             
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:prism="http://prismlibrary.com/" xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:DashboardMenuBarViewModel}"
              mc:Ignorable="d" 
              MinWidth="200"
              MinHeight="800">
@@ -48,7 +48,8 @@
 
                 <Button 
                     x:Name="DashboardButton"
-                    Style="{StaticResource menuButton}">
+                    Style="{StaticResource menuButton}"
+                    Command="{Binding DashboardEditingBaseCommand}">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Home"
                                       Style="{StaticResource menuIcons}"/>
@@ -85,8 +86,9 @@
             </Button>
 
             <Button 
-                    x:Name="CustomerButton"
-                    Style="{StaticResource menuButton}">
+                x:Name="CustomerButton"
+                Style="{StaticResource menuButton}"
+                Command="{Binding CustomerCommand}">
                 <StackPanel Orientation="Horizontal">
                     <fa:IconImage Icon="Mandalorian"
                                       Style="{StaticResource menuIcons}"/>

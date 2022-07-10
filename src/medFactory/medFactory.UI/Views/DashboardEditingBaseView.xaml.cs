@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace medFactory.UI.Views
 {
     /// <summary>
-    /// Interaction logic for RibbonView.xaml
+    /// Interaction logic for DashboardEditingBaseView.xaml
     /// </summary>
-    public partial class RibbonView : UserControl
+    public partial class DashboardEditingBaseView : UserControl
     {
-        public RibbonView()
+        public DashboardEditingBaseView()
         {
             InitializeComponent();
         }
-
-
     }
 }

@@ -24,7 +24,12 @@
         </ContentControl>
 
         <Grid Grid.Column="1" Background="Wheat">
-            <Grid.RowDefinitions>
+            <ContentControl
+                prism:RegionManager.RegionName="{x:Static infra:Regions.ContentRegion}">
+            </ContentControl>
+        </Grid>
+        <!--
+        <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -39,5 +44,6 @@
 
             </ContentControl>
         </Grid>
+        -->
     </Grid>
 </UserControl>

@@ -15,6 +15,7 @@
                 <ResourceDictionary Source="Styles/UserLoginPageStyle.xaml"/>
                 <ResourceDictionary Source="Styles/MenuBarStyle.xaml"/>
                 <ResourceDictionary Source="Styles/DashboardContentStyle.xaml"/>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
                 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

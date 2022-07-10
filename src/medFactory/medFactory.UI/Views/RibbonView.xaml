@@ -25,18 +25,9 @@
         </Grid.ColumnDefinitions>
 
         <Button
-            Style="{StaticResource ribbonAddbutton}"
-            HorizontalAlignment="Center">
-            <fa:IconImage Icon="plus" 
-                          Foreground="White"
-                          Height="10"
-                          Width="10"
-                          HorizontalAlignment="Center"/>
-        </Button>
-
-        <Button
             Grid.Column="4"
-            Style="{StaticResource ribbonSettingsbutton}">
+            Command="{Binding AddCustomerCommand}"
+            Style="{StaticResource ribbonSettingsbutton}" Cursor="Hand">
             <fa:IconImage  Icon="Bell"
                            Foreground="#262626"
                            Height="15"
@@ -45,6 +36,7 @@
 
         <Button
             Grid.Column="5"
+            Cursor="Hand"
             Style="{StaticResource ribbonSettingsbutton}">
             <fa:IconImage  Icon="SlidersH"
                            Foreground="#262626"
@@ -54,6 +46,7 @@
 
         <Button
             Grid.Column="6"
+            Cursor="Hand"
             Style="{StaticResource ribbonSettingsbutton}">
             <fa:IconImage  Icon="Question"
                            Foreground="#262626"
@@ -63,6 +56,7 @@
 
         <Button
             Grid.Column="7"
+            Cursor="Hand"
             Margin="0 0 10 0"
             Style="{StaticResource ribbonSettingsbutton}">
             <fa:IconImage  Icon="User"

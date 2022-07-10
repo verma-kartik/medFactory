@@ -1,0 +1,200 @@
+﻿<UserControl x:Class="medFactory.UI.Views.DashboardEditingBaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:medFactory.UI.Views" xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:DashboardEditingBaseViewModel}"
+              xmlns:prism="http://prismlibrary.com/" 
+             mc:Ignorable="d" 
+             MinHeight="760"
+             MinWidth="800"
+             Background="White">
+    <Grid
+        Margin="0 0 30 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <Border 
+            Background="White" 
+            BorderBrush="#EBE8FC" 
+            BorderThickness="5"
+            CornerRadius="10"
+            Margin="30">
+            <Grid
+                Grid.Row="0"           
+                Background="#EBE8FC">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image
+                        Grid.Column="0"
+                        Source="/Images/dashboard_1.png"
+                        Width="326"
+                        Height="154"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Margin="0 0 100 0"/>
+
+                <StackPanel
+                        Orientation="Vertical"
+                        Grid.Column="1"
+                        HorizontalAlignment="Left">
+                    <TextBlock 
+                        Text="Never worry about" 
+                        Foreground="#6F4ED0"
+                        FontSize="35" 
+                        FontWeight="DemiBold"
+                        Margin="20 10 0 0"/>
+                    <TextBlock 
+                        Text="your Inventory" 
+                        Foreground="#6F4ED0"
+                        FontSize="35" 
+                        FontWeight="DemiBold"
+                        Margin="20 0 0 0"/>
+                    <Button 
+                        x:Name="AddBillFromDashboard"
+                        Width="120"
+                        Height="35"
+                        Content="Create a Bill"
+                        FontSize="15"
+                        HorizontalAlignment="Left"
+                        Margin="20 15 0 0"
+                        FontWeight="DemiBold"
+                        Style="{StaticResource addBillFromDashboardButton}"                    
+                        />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border 
+                Grid.Column="0"
+                Background="White" 
+                BorderBrush="#EBE8FC" 
+                BorderThickness="3"
+                CornerRadius="15"
+                Margin="30 0 20 0">
+                <StackPanel                    
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+                    <TextBlock
+                        Text="Out of Stock Products"
+                        FontWeight="Bold"
+                        FontSize="25"/>
+
+                    <StackPanel
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <Image
+                            Grid.Column="0"
+                            Source="/Images/outofstock.png"
+                            Width="90"
+                            Height="90"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Margin="0 10 10 0"
+                        />
+
+                        <TextBlock
+                            Text="3"
+                            FontWeight="Bold"
+                            FontSize="30"
+                            Margin="0 10 0 0"
+                            VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border 
+                Grid.Column="1"
+            Background="White" 
+            BorderBrush="#EBE8FC" 
+            BorderThickness="3"
+            CornerRadius="15"
+            Margin="0 0 20 0">
+                <StackPanel
+                    
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+                    <TextBlock
+                        Text="Products on Low Stock"
+                        FontWeight="Bold"
+                        FontSize="25"/>
+
+                    <StackPanel
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <Image
+                        Grid.Column="0"
+                        Source="/Images/productsonlowstock.png"
+                        Width="90"
+                        Height="90"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 10 10 0"
+                        />
+
+                        <TextBlock
+                        Text="3"
+                        FontWeight="Bold"
+                        FontSize="30"
+                            Margin="0 10 0 0"
+                            VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border 
+                Grid.Column="2"
+            Background="White" 
+            BorderBrush="#EBE8FC" 
+            BorderThickness="3"
+            CornerRadius="15"
+            Margin="0 0 27 0">
+                <StackPanel
+                    
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+                    <TextBlock
+                        Text="Products to be Arrived"
+                        FontWeight="Bold"
+                        FontSize="25"/>
+
+                    <StackPanel
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <Image
+                        Grid.Column="0"
+                        Source="/Images/productstobearrived.png"
+                        Width="90"
+                        Height="90"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 10 10 0"
+                        />
+
+                        <TextBlock
+                        Text="12"
+                        FontWeight="Bold"
+                        FontSize="30"
+                            Margin="0 10 0 0"
+                            VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
