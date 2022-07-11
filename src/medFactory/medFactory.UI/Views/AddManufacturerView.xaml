@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="medFactory.UI.Views.AddManufacturerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:medFactory.UI.Views"
+             mc:Ignorable="d" 
+             MinHeight="800"
+             MinWidth="800"
+             Background="White"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                Grid.Column="0"
+                Text="New Manufacturer"
+                FontSize="20"
+                FontWeight="DemiBold"
+                Margin="10 0 0 0"
+                VerticalAlignment="Center"
+                />
+            </Grid>
+
+            <Separator Margin="10 10 15 0 " Height="0.8" Foreground="Black" Background="LightGray"/>
+        </StackPanel>
+
+        <Grid
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel
+            Grid.Column="0"
+            >
+                <TextBlock TextWrapping="Wrap" FontWeight="DemiBold" FontSize="16" TextAlignment="Left" Margin="20,12,10,0"><Run Language="en-in" Text="Manufacturer Name"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="DemiBold" FontSize="16" TextAlignment="Left" Margin="20,28,0,0" Text="License"/>
+                <TextBlock TextWrapping="Wrap" FontWeight="DemiBold" FontSize="16" TextAlignment="Left" Margin="20,28,0,0"><Run Language="en-in" Text="Mobile"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="DemiBold" FontSize="16" TextAlignment="Left" Margin="20,28,0,0"><Run Language="en-in" Text="Address"/></TextBlock>
+                
+
+                <Button
+                    HorizontalAlignment="Right"
+                Style="{StaticResource saveInputButton}"
+                Command="{Binding SaveCustomerCommand}" Cursor="Hand"/>
+
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="1">
+                <Border 
+                Style="{StaticResource inputtextBoxBorder}">
+                    <TextBox 
+                        Style="{StaticResource inputTextBox}"/>
+                </Border>
+
+                <Border 
+                Style="{StaticResource inputtextBoxBorder}">
+                    <TextBox 
+                        Style="{StaticResource inputTextBox}"/>
+                </Border>
+
+                <Border 
+                Style="{StaticResource inputtextBoxBorder}">
+                    <TextBox 
+                        Style="{StaticResource inputTextBox}"/>
+                </Border>
+
+                <Border 
+                Style="{StaticResource inputtextBoxBorder}">
+                    <TextBox 
+                        Style="{StaticResource inputTextBox}"/>
+                </Border>
+
+                <Button
+                Style="{StaticResource cancelInputButton}"
+                Command="{Binding CancelCustomerCommand}" Cursor="Hand"/>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>
