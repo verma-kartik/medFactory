@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:medFactory.UI.Views"
+             xmlns:local="clr-namespace:medFactory.UI.Views" 
+             xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:AddSupplierViewModel}"
+              mc:Ignorable="d" 
              MinHeight="800"
              MinWidth="800"
              Background="White"
@@ -53,7 +55,7 @@
                 <Button
                     HorizontalAlignment="Right"
                 Style="{StaticResource saveInputButton}"
-                Command="{Binding SaveCustomerCommand}" Cursor="Hand"/>
+                Command="{Binding SaveSupplierCommand}" Cursor="Hand"/>
 
             </StackPanel>
 
@@ -79,7 +81,7 @@
 
                 <Button
                 Style="{StaticResource cancelInputButton}"
-                Command="{Binding CancelCustomerCommand}" Cursor="Hand"/>
+                Command="{Binding CancelSupplierCommand}" Cursor="Hand"/>
 
             </StackPanel>
         </Grid>

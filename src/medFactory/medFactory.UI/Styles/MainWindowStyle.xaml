@@ -20,12 +20,12 @@
                         <ContentPresenter
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                                TextBlock.Foreground="red"/>
+                                TextBlock.Foreground="#e50600"/>
                     </Border>
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="red" TargetName="bd"/>
+                            <Setter Property="Background" Value="#e50600" TargetName="bd"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 

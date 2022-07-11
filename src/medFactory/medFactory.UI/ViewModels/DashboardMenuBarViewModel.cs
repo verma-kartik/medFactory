@@ -8,12 +8,17 @@ namespace medFactory.UI.ViewModels
     {
         public DelegateCommand CustomerCommand { get; private set; }
         public DelegateCommand DashboardEditingBaseCommand { get; private set; }
+        public DelegateCommand SupplierCommand { get; private set; }
+        public DelegateCommand ManufacturerCommand { get; private set; }
+
         private readonly IRegionManager _regionManager;
 
         public DashboardMenuBarViewModel(IRegionManager regionManager)
         {
             _regionManager = regionManager;
             CustomerCommand = new DelegateCommand(ToCustomer);
+            SupplierCommand = new DelegateCommand(ToSupplier);
+            ManufacturerCommand = new DelegateCommand(ToManufacturer);
             DashboardEditingBaseCommand = new DelegateCommand(ToDashBoardEditingBase);
         }
 
@@ -25,6 +30,16 @@ namespace medFactory.UI.ViewModels
         private void ToCustomer()
         {
             _regionManager.RequestNavigate(Region.Regions.EditingRegion, new Uri("CustomerView", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ToSupplier()
+        {
+            _regionManager.RequestNavigate(Region.Regions.EditingRegion, new Uri("SupplierView", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ToManufacturer()
+        {
+            _regionManager.RequestNavigate(Region.Regions.EditingRegion, new Uri("ManufacturerView", UriKind.RelativeOrAbsolute));
         }
     }
 }

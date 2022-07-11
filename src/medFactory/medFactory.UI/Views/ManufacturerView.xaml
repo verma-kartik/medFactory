@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-             xmlns:local="clr-namespace:medFactory.UI.Views"
+             xmlns:local="clr-namespace:medFactory.UI.Views" xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ManufacturerViewModel}"
              mc:Ignorable="d" 
              MinHeight="800"
              MinWidth="800"
@@ -43,16 +43,10 @@
                 Margin="10 0 0 0"
                 VerticalAlignment="Center"
                 />
-                <Button Grid.Column="1"
-                        
-                        Content="Show"
-                        Width="100">
-
-                </Button>
                 <Button
                 Grid.Column="2"
                 Style="{StaticResource ribbonAddbutton}"
-                    Command="{Binding NewCustomerCommand}"
+                    Command="{Binding NewManufacturerCommand}"
                 HorizontalAlignment="Center" Cursor="Hand">
                     <fa:IconImage Icon="plus" 
                           Foreground="White"

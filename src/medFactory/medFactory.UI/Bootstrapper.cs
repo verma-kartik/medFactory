@@ -29,6 +29,14 @@ namespace medFactory.UI
             containerRegistry.RegisterForNavigation<AddCustomerView, AddCustomerViewModel>();
             containerRegistry.RegisterForNavigation<CustomerView, CustomerViewModel>();
 
+            containerRegistry.RegisterForNavigation<ManufacturerView, ManufacturerViewModel>();
+            containerRegistry.RegisterForNavigation<AddManufacturerView, AddManufacturerViewModel>();
+
+            containerRegistry.RegisterForNavigation<SupplierView, SupplierViewModel>();
+            containerRegistry.RegisterForNavigation<AddSupplierView, AddSupplierViewModel>();
+
+
+
         }
     }
 }

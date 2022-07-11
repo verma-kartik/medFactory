@@ -100,7 +100,8 @@
 
             <Button
                     x:Name="SupplierButton"
-                    Style="{StaticResource menuButton}">
+                    Style="{StaticResource menuButton}"
+                Command="{Binding SupplierCommand}">
                 <StackPanel Orientation="Horizontal">
                     <fa:IconImage Icon="Truck" 
                                       Style="{StaticResource menuIcons}"/>
@@ -110,7 +111,8 @@
 
             <Button 
                     x:Name="ManufacturerButton"
-                    Style="{StaticResource menuButton}">
+                    Style="{StaticResource menuButton}"
+                Command="{Binding ManufacturerCommand}">
                 <StackPanel Orientation="Horizontal">
                     <fa:IconImage Icon="FlagCheckered" 
                                       Style="{StaticResource menuIcons}"/>
