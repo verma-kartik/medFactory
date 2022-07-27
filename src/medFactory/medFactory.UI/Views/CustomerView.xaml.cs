@@ -1,7 +1,16 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using Microsoft.Data.SqlClient;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using ImTools;
+using medFactory.Domain.Models;
+using medFactory.EF;
+using medFactory.EF.Repository;
+using medFactory.Services.Contracts;
+using medFactory.Services.Services;
 
 namespace medFactory.UI.Views
 {
@@ -10,41 +19,30 @@ namespace medFactory.UI.Views
     /// </summary>
     public partial class CustomerView : UserControl
     {
+        private readonly IServiceManager _service;
         public CustomerView()
         {
             InitializeComponent();
+            _service = new ServiceManager(new UnitOfWork(new DesignTimeDbContext()));
             Load_Data();
         }
 
         #region Load_Data
         private void Load_Data()
         {
-            SqlConnection connection = new("Server=localhost,1433;Database = medfactory;User Id = SA;Password = medFactory@1");
-            using (connection) //use your connection string here
+            try
             {
-                string SelectQuery = "Select * From dbo.Customers";
-                using SqlDataAdapter adapter = new(SelectQuery, connection);
-                try
-                {
-                    SqlCommandBuilder commandBuilder = new(adapter);
-
-                    System.Data.DataTable table = new("dbo.Customers");
-                    adapter.Fill(table);
-                    CustomerDataGrid.ItemsSource = table.DefaultView;
-
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message.ToString(), "ERROR Loading");
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
+                var customers = _service.CustomerService.GetCustomers();
+                var coll = customers.ToList();
+                CustomerDataGrid.ItemsSource = coll;
             }
-        }
-        #endregion
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString(), "ERROR Loading");
+            }
 
+        }
     }
+        #endregion
 }
+

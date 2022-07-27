@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace medFactory.Domain.Models
+﻿namespace medFactory.Domain.Models
 {
     public partial class User
     {

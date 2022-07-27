@@ -11,12 +11,10 @@
              MinWidth="800"
              Background='White'>
     <UserControl.Resources>
-        <Style TargetType="syncfusion:AdvancedFilterControl">
-            
-        </Style>
-
+        
         <Style x:Key="filterControlStyle" TargetType="syncfusion:GridFilterControl">
             <Setter Property="FilterMode" Value="AdvancedFilter" />
+            
         </Style>
     </UserControl.Resources>
     <Grid>
@@ -77,8 +75,7 @@
                 HorizontalAlignment="Center"
                 FilterPopupStyle="{StaticResource filterControlStyle}"
                 >
-                <!--
-                <syncfusion:SfDataGrid.Columns>
+                <!--<syncfusion:SfDataGrid.Columns>
                     <syncfusion:GridTextColumn HeaderText="ID" Width="40" MappingName="customerID"/>
                     <syncfusion:GridTextColumn HeaderText="Customer Name" Width="150" MappingName="customer_name" />
                     <syncfusion:GridTextColumn HeaderText="Age" Width="40" MappingName="age" />
@@ -87,9 +84,8 @@
                     <syncfusion:GridTextColumn HeaderText="Phone" Width="70" MappingName="mobile" />
                     <syncfusion:GridTextColumn HeaderText="Email" Width="100" MappingName="email" />
                     <syncfusion:GridTextColumn HeaderText="Address" Width="150" MappingName="address" />
-                    <syncfusion:GridTextColumn HeaderText="Pincode" MappingName="pincode"/>
-                </syncfusion:SfDataGrid.Columns
-                -->
+                    <syncfusion:GridTextColumn HeaderText="Pin-code" MappingName="pincode"/>
+                </syncfusion:SfDataGrid.Columns>-->
             </syncfusion:SfDataGrid>
 
         </Grid>

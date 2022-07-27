@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "medFactory.Domain", "medFac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "medFactory.EF", "medFactory.EF\medFactory.EF.csproj", "{3EA2C32B-A817-4BB1-8771-D45D7A148C25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "medFactory.Services", "medFactory.Services\medFactory.Services.csproj", "{2EF46F20-D667-460E-AEA5-E1D2A92C148D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C4972EE0-B40D-4FE6-8812-A3C4D1CD44A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3EA2C32B-A817-4BB1-8771-D45D7A148C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EA2C32B-A817-4BB1-8771-D45D7A148C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EA2C32B-A817-4BB1-8771-D45D7A148C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EF46F20-D667-460E-AEA5-E1D2A92C148D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF46F20-D667-460E-AEA5-E1D2A92C148D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF46F20-D667-460E-AEA5-E1D2A92C148D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF46F20-D667-460E-AEA5-E1D2A92C148D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4972EE0-B40D-4FE6-8812-A3C4D1CD44A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4972EE0-B40D-4FE6-8812-A3C4D1CD44A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4972EE0-B40D-4FE6-8812-A3C4D1CD44A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4972EE0-B40D-4FE6-8812-A3C4D1CD44A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

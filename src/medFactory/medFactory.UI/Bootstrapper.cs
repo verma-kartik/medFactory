@@ -3,6 +3,10 @@ using medFactory.UI.Views;
 using Prism.DryIoc;
 using Prism.Ioc;
 using System.Windows;
+using medFactory.EF.Contracts;
+using medFactory.EF.Repository;
+using medFactory.Services.Contracts;
+using medFactory.Services.Services;
 
 namespace medFactory.UI
 {
@@ -15,6 +19,9 @@ namespace medFactory.UI
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterScoped<IUnitOfWork, UnitOfWork>();
+            containerRegistry.RegisterScoped <IServiceManager, ServiceManager>();
+            
             containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>();
             containerRegistry.RegisterForNavigation<LoadingPageView, LoadingPageViewModel>();
             containerRegistry.RegisterForNavigation<UserLoginView, UserLoginViewModel>();

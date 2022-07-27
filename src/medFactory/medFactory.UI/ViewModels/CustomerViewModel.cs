@@ -1,10 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Regions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using medFactory.Services.Contracts;
 
 namespace medFactory.UI.ViewModels
 { 
@@ -12,10 +9,12 @@ namespace medFactory.UI.ViewModels
     {
         public DelegateCommand NewCustomerCommand { get; private set; }
         private readonly IRegionManager _regionManager;
+        private readonly IServiceManager _service;
 
-        public CustomerViewModel(IRegionManager regionManager)
+        public CustomerViewModel(IRegionManager regionManager, IServiceManager service)
         {
             _regionManager = regionManager;
+            _service = service;
             NewCustomerCommand = new DelegateCommand(ToNewCustomer);
         }
 

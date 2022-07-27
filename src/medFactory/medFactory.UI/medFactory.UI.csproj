@@ -38,4 +38,8 @@
     <Resource Include="Images\productstobearrived.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\medFactory.Services\medFactory.Services.csproj" />
+  </ItemGroup>
+
 </Project>

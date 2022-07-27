@@ -11,9 +11,7 @@
              MinWidth="800"
              Background='White'>
     <UserControl.Resources>
-        <Style TargetType="syncfusion:AdvancedFilterControl">
-
-        </Style>
+        
 
         <Style x:Key="filterControlStyle" TargetType="syncfusion:GridFilterControl">
             <Setter Property="FilterMode" Value="AdvancedFilter" />

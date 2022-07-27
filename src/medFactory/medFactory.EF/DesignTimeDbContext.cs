@@ -5,7 +5,7 @@ namespace medFactory.EF
 {
     public class DesignTimeDbContext : IDesignTimeDbContextFactory<DatabaseContext>
     {
-        public DatabaseContext CreateDbContext(string[]? args)
+        public DatabaseContext CreateDbContext(string[]? args = null)
         {
             var options = new DbContextOptionsBuilder<DatabaseContext>();
             options.UseSqlServer("Server=localhost,1433;Database = medfactory;User Id = SA;Password = medFactory@1",
