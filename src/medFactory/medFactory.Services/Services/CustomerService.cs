@@ -20,4 +20,23 @@ public class CustomerService : ICustomerService
         return customers;
 
     }
+
+    public async Task AddCustomer(Customer customer)
+    {
+        var entity = new Customer()
+        {
+            CustomerId = customer.CustomerId,
+            CustomerName = customer.CustomerName,
+            Age = customer.Age,
+            Address = customer.Address,
+            AllocatedDoctor = customer.AllocatedDoctor,
+            Email = customer.Email,
+            Gender = customer.Gender,
+            Mobile = customer.Mobile,
+            Pincode = customer.Pincode,
+            Orders = new List<Order>(),
+            SaleInvoices = new List<SaleInvoice>()
+        };
+        await _unitOfWork.Customers.Add(entity);
+    }
 }

@@ -67,14 +67,5 @@ namespace medFactory.UI.ViewModels
             var coll = new ObservableCollection<Customer>(ListofCustomers);
             Customers = coll;
         }
-        
-       
-
-
-
-
-
-
-
-    }
+   }
 }

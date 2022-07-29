@@ -6,7 +6,6 @@
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              xmlns:local="clr-namespace:medFactory.UI.Views" xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:CustomerViewModel}"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              MinHeight="800"
              MinWidth="800"
@@ -14,7 +13,7 @@
     
     <UserControl.Resources>
         
-        <Style x:Key="filterControlStyle" TargetType="syncfusion:GridFilterControl">
+        <Style x:Key="FilterControlStyle" TargetType="syncfusion:GridFilterControl">
             <Setter Property="FilterMode" Value="AdvancedFilter" />
             
         </Style>
@@ -22,6 +21,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -42,12 +42,7 @@
                 Margin="10 0 0 0"
                 VerticalAlignment="Center"
                 />
-                <Button Grid.Column="1"
-                        Command="{Binding ShowCustomerCommand}"
-                        Content="Show"
-                        Width="100">
-
-                </Button>
+                
                 <Button
                 Grid.Column="2"
                 Style="{StaticResource ribbonAddbutton}"
@@ -63,33 +58,36 @@
 
             <Separator Margin="10 10 15 0 " Height="0.8" Foreground="Black" Background="LightGray"/>
         </StackPanel>
+        
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Left"
+                    Margin="0">
+            <Button
+                    Command="{Binding ShowCustomerCommand}"
+                    Style="{StaticResource LoadDataButton}"
+                    Cursor="Hand"
+                    Width="50"
+                    
+                    >
+            </Button>
+        </StackPanel>
+       
 
         <Grid
-            Grid.Row="1">
+            Grid.Row="2">
             <syncfusion:SfDataGrid 
                 x:Name="CustomerDataGrid"
                 ItemsSource="{Binding Customers, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}"
                 AutoGenerateColumns="True"
                 Width="auto"
-                
                 AllowFiltering="True"
                 ColumnSizer="Auto"
                 HeaderRowHeight="25"
                 Height="Auto" 
                 HorizontalAlignment="Center"
-                FilterPopupStyle="{StaticResource filterControlStyle}"
+                FilterPopupStyle="{StaticResource FilterControlStyle}"
                 >
-                <!--<syncfusion:SfDataGrid.Columns>
-                    <syncfusion:GridTextColumn HeaderText="ID" Width="40" MappingName="customerID"/>
-                    <syncfusion:GridTextColumn HeaderText="Customer Name" Width="150" MappingName="customer_name" />
-                    <syncfusion:GridTextColumn HeaderText="Age" Width="40" MappingName="age" />
-                    <syncfusion:GridTextColumn HeaderText="Gender" Width="50" MappingName="gender" />
-                    <syncfusion:GridTextColumn HeaderText="Allocated Doctor" Width="130" MappingName="allocated_doctor" />
-                    <syncfusion:GridTextColumn HeaderText="Phone" Width="70" MappingName="mobile" />
-                    <syncfusion:GridTextColumn HeaderText="Email" Width="100" MappingName="email" />
-                    <syncfusion:GridTextColumn HeaderText="Address" Width="150" MappingName="address" />
-                    <syncfusion:GridTextColumn HeaderText="Pin-code" MappingName="pincode"/>
-                </syncfusion:SfDataGrid.Columns>-->
+
             </syncfusion:SfDataGrid>
 
         </Grid>

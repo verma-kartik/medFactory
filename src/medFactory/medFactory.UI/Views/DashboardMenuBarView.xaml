@@ -27,7 +27,7 @@
                                 <GradientStop Color="#d3b7ff" Offset="1"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <TextBlock Text="MP" Foreground="White" FontSize="15" FontWeight="SemiBold"
+                        <TextBlock Text="MF" Foreground="White" FontSize="15" FontWeight="SemiBold"
                                    TextAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
 
