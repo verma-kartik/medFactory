@@ -6,10 +6,12 @@
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              xmlns:local="clr-namespace:medFactory.UI.Views" xmlns:viewmodels="clr-namespace:medFactory.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:CustomerViewModel}"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              MinHeight="800"
              MinWidth="800"
              Background='White'>
+    
     <UserControl.Resources>
         
         <Style x:Key="filterControlStyle" TargetType="syncfusion:GridFilterControl">
@@ -41,7 +43,7 @@
                 VerticalAlignment="Center"
                 />
                 <Button Grid.Column="1"
-                        
+                        Command="{Binding ShowCustomerCommand}"
                         Content="Show"
                         Width="100">
 
@@ -66,8 +68,10 @@
             Grid.Row="1">
             <syncfusion:SfDataGrid 
                 x:Name="CustomerDataGrid"
+                ItemsSource="{Binding Customers, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}"
                 AutoGenerateColumns="True"
                 Width="auto"
+                
                 AllowFiltering="True"
                 ColumnSizer="Auto"
                 HeaderRowHeight="25"
@@ -89,8 +93,6 @@
             </syncfusion:SfDataGrid>
 
         </Grid>
-
-
 
     </Grid>
 

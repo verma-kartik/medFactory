@@ -23,12 +23,14 @@ namespace medFactory.UI.Views
         public CustomerView()
         {
             InitializeComponent();
-            _service = new ServiceManager(new UnitOfWork(new DesignTimeDbContext()));
-            Load_Data();
+           // _service = new ServiceManager(new UnitOfWork(new DesignTimeDbContext()));
+            //Load_Data();
         }
+        
+        
 
         #region Load_Data
-        private void Load_Data()
+        /*private void Load_Data()
         {
             try
             {
@@ -41,7 +43,7 @@ namespace medFactory.UI.Views
                 MessageBox.Show(e.Message.ToString(), "ERROR Loading");
             }
 
-        }
+        }*/
     }
         #endregion
 }
