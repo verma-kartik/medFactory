@@ -8,7 +8,7 @@ public interface IGenericRepository<T> where  T :class
     IEnumerable<T> GetAll();
 
     IEnumerable<T> Find(Expression<Func<T, bool>> expression);
-    Task Add(T entity);
+    void Add(T entity);
     Task AddRange(IEnumerable<T> entities);
     void Remove(T entity);
     void RemoveRange(IEnumerable<T> entities);

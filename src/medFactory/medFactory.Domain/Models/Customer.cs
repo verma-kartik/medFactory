@@ -2,12 +2,6 @@
 {
     public partial class Customer
     {
-        public Customer()
-        {
-            Orders = new HashSet<Order>();
-            SaleInvoices = new HashSet<SaleInvoice>();
-        }
-
         public int CustomerId { get; set; }
         public string CustomerName { get; set; } = null!;
         public int Age { get; set; }
@@ -18,7 +12,7 @@
         public string Address { get; set; } = null!;
         public int Pincode { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
-        public virtual ICollection<SaleInvoice> SaleInvoices { get; set; }
+        public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+        public ICollection<SaleInvoice> SaleInvoices { get; set; } = new HashSet<SaleInvoice>();
     }
 }

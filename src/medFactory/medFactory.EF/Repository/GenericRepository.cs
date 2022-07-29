@@ -7,7 +7,7 @@ namespace medFactory.EF.Repository;
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
     private readonly DesignTimeDbContext _context;
-    private DbSet<T> DbSet { get; }
+    private DbSet<T> DbSet { get; set; }
 
     public GenericRepository(DesignTimeDbContext context)
     {
@@ -30,9 +30,9 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         return DbSet.Where(expression);
     }
 
-    public async Task Add(T entity)
+    public void Add(T entity)
     {
-        await DbSet.AddAsync(entity).ConfigureAwait(false);
+        DbSet.Add(entity);
     }
 
     public async Task AddRange(IEnumerable<T> entities)

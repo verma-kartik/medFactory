@@ -8,30 +8,32 @@ using medFactory.Services.Services;
 
 namespace ConsoleApp1;
 
-public class Program
+public static class Program
 {
-    static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
         IServiceManager service = new ServiceManager(new UnitOfWork(new DesignTimeDbContext()));
 
-        var customer = new Customer();
-
-        customer.Address = "Rohini";
-        customer.Age = 12;
-        customer.CustomerId = 2;
-        customer.Email = "idk@gmail.com";
-        customer.Gender = "male";
-        customer.CustomerName = "Aditya";
-        customer.Mobile = 9310347292;
-        customer.Pincode = 112233;
-        customer.AllocatedDoctor = "Mr. Pratt";
-
-        var entity = customer;
-
-        await service.CustomerService.AddCustomer(entity);
+        var customer = new Customer
+        {
+            Address = "Rohini",
+            Age = 12,
+            CustomerId = 2,
+            Email = "idk@gmail.com",
+            Gender = "male",
+            CustomerName = "Aditya",
+            Mobile = 9310347292,
+            Pincode = 112233,
+            AllocatedDoctor = "Mr. Pratt"
+        };
+        
+        service.CustomerService.AddCustomer(customer);
 
         var list = service.CustomerService.GetCustomers();
-
         Console.WriteLine(list.Count());
+        
+
+
+
     }
 }
